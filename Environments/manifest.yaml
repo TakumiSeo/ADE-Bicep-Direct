@@ -1,0 +1,18 @@
+name: ACSS
+version: 1.0.0
+summary: Azure Center of SAP Solution Basement Environment
+description: Deploys an ACSS prerequisite
+runner: ARM
+templatePath: main.bicep
+
+parameters:
+  - id: vnetAddressPrefix
+    name: VnetAddressPrefix
+    description: 'Vnet address prefix'
+    type: string
+    default: '10.0.0.0/16'
+  - id: subnetAddressPrefix
+    name: SubnetAddressPref
+    description: 'Subnet address prefix'
+    type: string
+    default: '10.0.0.0/24'
